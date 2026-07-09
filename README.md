@@ -98,19 +98,19 @@ public class CharizardController : MonoBehaviour
 ### 1. Настройка окружения
 Скорректированы параметры `Player Settings`: отключен Vulkan API, деактивирован Multi-threaded Rendering. В `XR Plug-in Management` активирован Google ARCore.
 
-![Настройка XR Plug-in Management](screen1.jpg)
+![Настройка XR Plug-in Management](Screenshots/screen1.png)
 *Рис. 1: Инициализация ARCore в качестве основного провайдера.*
 
 ### 2. Подготовка AR-сцены
 Стандартная камера заменена на **XR Origin (Mobile AR)**. Добавлен `AR Session` для контроля жизненного цикла приложения. За трекинг маркеров отвечает компонент `AR Tracked Image Manager`.
 
-![Структура сцены XR](screen2.jpg)
+![Структура сцены XR](Screenshots/screen2.png)
 *Рис. 2: Иерархия объектов для работы с дополненной реальностью.*
 
 ### 3. Настройка конечного автомата (Animator)
 Создан `Animator Controller` с тремя ключевыми состояниями: *Jump* (инициализация), *Hover* (покой) и *Fly* (передвижение). Логика переходов управляется параметром `fly_param`.
 
-![Настройка Animator Controller](screen3.jpg)
+![Настройка Animator Controller](Screenshots/screen3.png)
 *Рис. 3: Граф состояний анимаций.*
 
 ---
@@ -119,5 +119,5 @@ public class CharizardController : MonoBehaviour
 
 Для рендеринга камеры реального мира на задний фон сцены был подключен профиль `AR Background Renderer Feature`. Финальная компиляция (`Build and Run`) успешно произведена на Android-устройство через USB Debugging.
 
-![Демонстрация работы AR](screen4.jpg)
+![Демонстрация работы AR](Screenshots/screen4.png)
 *Рис. 4: Финальный результат — 3D-модель успешно спроецирована на реальный маркер.*
